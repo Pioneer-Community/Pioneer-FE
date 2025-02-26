@@ -11,6 +11,7 @@ import AuthLinks from "./components/molecules/AuthLinks";
 import SignupForm from "./components/organisms/Signup";
 import Mypage from "./components/pages/Mypage";
 import Editprofile from "./components/molecules/Editprofile";
+import CreatePost from "./components/pages/CreatePost";
 
 const App: React.FC = () => {
   // API에서 받아온 데이터를 저장할 상태
@@ -18,7 +19,7 @@ const App: React.FC = () => {
 
   // Spring Boot API 호출
   useEffect(() => {
-    fetch("http://localhost:8082/api/hello") // 백엔드 API 주소
+    fetch("http://localhost:9005/api/hello") // 백엔드 API 주소
       .then((response) => response.text()) // 응답을 텍스트로 변환
       .then((data) => setMessage(data)) // 상태에 저장
       .catch((error) => console.error("API 호출 오류:", error));
@@ -35,6 +36,7 @@ const App: React.FC = () => {
           <Route path="mypage" element={<Mypage />} />
           <Route path="/mypage-edit" element={<Editprofile />} />
           <Route path="freeboard" element={<FreeBoard />} />
+          <Route path="/createpost" element={<CreatePost />} />
           <Route path="infoboard" element={<InfoBoard />} />
           <Route path="attractions" element={<Attractions />} />
           <Route path="restaurants" element={<Restaurants />} />
