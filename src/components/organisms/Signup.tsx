@@ -68,6 +68,7 @@ const SignupForm = () => {
         noValidate
         autoComplete="off"
         className="flex flex-col w-96"
+        onSubmit={(e) => e.preventDefault()}
       >
         <Input placeholder="이메일 주소" />
         <div className="flex gap-2">

@@ -225,28 +225,6 @@ const AgreeForm = () => {
         </Accordion>
       </article>
 
-      <article className="flex space-x-4 w-full">
-        <Checkbox {...label} />
-        <Accordion className="flex-1">
-          <AccordionSummary
-            expandIcon={<ArrowDropDownIcon />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography component="span">준거법 및 분쟁 해결</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              <p>
-                1. 본 약관은 스위스 연방 법률에 따라 해석되고 적용됩니다.
-                <br /> 2. 서비스 이용과 관련하여 발생하는 모든 분쟁은 스위스
-                법원에서 해결됩니다
-              </p>
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </article>
-
       <Button
         backgroundColor="bg-lightyellow"
         textColor="text-black"
